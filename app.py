@@ -14,5 +14,11 @@ def greet():
     return 'Hello {}'.format("Dat")
 
 
+
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = celsius * 9.0 / 5 + 32
+    return fahrenheit
+
+
 if __name__ == '__main__':
     app.run()
