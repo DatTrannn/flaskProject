@@ -9,10 +9,15 @@ def hello_world():  # put application's code here
 
 
 @app.route('/greet')
-@app.route('/greet/dat')
-def greet():
-    return 'Hello {}'.format("Dat")
+@app.route('/greet/<name>')
+def greet(name=""):
+    return 'Hello {}'.format(name)
 
+
+@app.route('/f')
+@app.route('/f/<celsius>')
+def return_fahrenheit(celsius=0):
+    return f"{celsius} Celsius = {celsius_to_fahrenheit(float(celsius))} Fahrenheit"
 
 
 def celsius_to_fahrenheit(celsius):
